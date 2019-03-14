@@ -1,0 +1,63 @@
+.home_p{
+  margin-top: 20px;
+  font-size: 36px;
+  color: rgb(12, 20, 1);
+}
+body{
+  background-image: url(../pictures/梅西.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: scroll;
+
+}
+
+
+#login_frame {
+  width: 400px;
+  height: 260px;
+  padding: 13px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+
+  background-color: rgba(240, 255, 255, 0.5);
+
+  border-radius: 10px;
+  text-align: center;
+}
+form p > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.label_input {
+  font-size: 14px;
+  font-family: 宋体;
+
+  width: 65px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  
+  color: white;
+  background-color: #3CD8FF;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.text_input{
+  font-size: 14px;
+  font-family: 宋体;
+
+
+  height: 28px;
+  width: 150px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+
+
+}
