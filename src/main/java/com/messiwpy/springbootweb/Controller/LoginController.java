@@ -5,12 +5,10 @@ import com.messiwpy.springbootweb.Dao.UserRepository;
 import com.messiwpy.springbootweb.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@RestController("/login")
+@RestController
+@RequestMapping(value="/users")
 public class LoginController  {
 
     @Autowired
@@ -29,7 +27,7 @@ public class LoginController  {
 
     }
 
-    @PostMapping("/")
+    @PostMapping("/login")
     public ResponseEntity<String>login(@RequestBody User user){
         String password;
         password=userRepository.findByAccount(user.getAccount()).getPassword();

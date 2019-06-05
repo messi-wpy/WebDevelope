@@ -1,7 +1,9 @@
 package com.messiwpy.springbootweb;
 
+import com.messiwpy.springbootweb.Dao.CourseRepository;
 import com.messiwpy.springbootweb.Dao.UserRepository;
 import com.messiwpy.springbootweb.Dao.UserTestRepository;
+import com.messiwpy.springbootweb.domain.Course;
 import com.messiwpy.springbootweb.domain.User;
 import com.messiwpy.springbootweb.domain.UserTest;
 import org.junit.Assert;
@@ -22,7 +24,14 @@ public class SpringBootWebApplicationTests {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private CourseRepository courseRepository;
 
+    @Test
+    public void courseTest(){
+        Course course=new Course("计算机科学","123asdsaf");
+        courseRepository.save(course);
+    }
 
     @Test
     public void loginTest(){
